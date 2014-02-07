@@ -36,7 +36,7 @@
 
     <%= javascript_include_tag "application" %>
   </head>
-  <body>
+  <body style="background-color:#FAAFBE">
 
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
@@ -53,38 +53,48 @@
               <li> <%= link_to "About", "/static_pages/about" %> </li>
               <li> <%= link_to "Help", "/static_pages/help" %> </li>
             </ul>
-            <ul class ="nav pull-right">
-              <li> <%= link_to "Login", "#" %> </li>
-              <li> <%= link_to "Nice Register", "#" %> </li>
-            </ul>
+            <div class ="nav pull-right">
+               <%= link_to "Login", "#", class: "btn btn-success"%> 
+               <%= link_to "Nice Register", "#", class: "btn btn-primary" %> 
+            </div>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
+
       <div class="row-fluid">
-        <div class="span3">
+
+        <div class="span2">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"> Site content  </li>
                  <li><%= link_to "Movies", "/movies"  %></li>
                  <li><%= link_to "Users", "/users"  %></li>
             </ul>
-
-            <ul class="nav nav-list">
-              <li class="nav-header">You must learn.</li>
-                <li> <a href = "http://www.khanacademy.com"> Khan Academy </a> </li>
-                <li> <a href = "http://www.codeacademy.com"> Code Academy </a> </li>
-                <li> <a href = "http://www.google.com"> Google </a> </li>
-            </ul>
          </div><!--/.well -->
         </div><!--/span-->
-        <div class="span9">
+
+        <div class="span8">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
+
+                 <div class="span2">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"> Site content  </li>
+                 <li><%= link_to "Movies", "/movies"  %></li>
+                 <li><%= link_to "Users", "/users"  %></li>
+            </ul>
+         </div><!--/.well -->
+        </div><!--/span-->
+
+
       </div><!--/row-->
+
+
 
       <footer>
         <div class=text-center>
