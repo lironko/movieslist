@@ -1,8 +1,13 @@
 Movieslist::Application.routes.draw do
-  get "static_pages/about"
-  get "static_pages/home"
-  get "static_pages/help"
-  get "static_pages/kittens"
+  root 'static_pages#home'
+
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/kittens', to: 'static_pages#kittens', via: 'get'
+
+
+  
+
   resources :movies
 
   resources :users
