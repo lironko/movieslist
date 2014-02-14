@@ -4,7 +4,7 @@ Movieslist::Application.routes.draw do
   match '/about', to: 'static_pages#about', via: 'get'
   match '/help', to: 'static_pages#help', via: 'get'
   match '/kittens', to: 'static_pages#kittens', via: 'get'
-
+  match '/contact', to: 'static_pages#contact', via: 'get'
 
   
 

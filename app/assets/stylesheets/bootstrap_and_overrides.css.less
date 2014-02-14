@@ -30,14 +30,54 @@
 // @linkColor: #ff0000;
 
 
+/* universal */
 
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #FFE1FF;
+}
+
+@media (min-width: 979px) {
+    body {
+        padding-top: 60px;
+    }
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* container */
+
+
+/* hero unit */
+.hero-unit {
+  background-color: white;
+  border: 1.5px solid black;
+  padding-top: 25px;
+}
 
 /* footer */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid black;
   color: black;
 }
 
@@ -56,4 +96,6 @@ footer ul li {
   margin-left: 10px;
 }
 
-
+footer a {
+  color: #da70d6;
+}

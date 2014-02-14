@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
   def kittens
   end
+
+  def contact
+  end
 end

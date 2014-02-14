@@ -1,6 +1,6 @@
 <% provide(:title, 'Kittens') %>
 <h1>Random Kittens</h1>
-<%10.times do |x|  %>
+<%10.times do |x|  %>  
   <img src="<%= generate_kitten(100+rand(300),100+rand(300))%>"> 
  <% end %>
 
