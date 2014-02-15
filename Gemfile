@@ -3,7 +3,7 @@ ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
-
+gem 'bcrypt-ruby'
 # Use sqlite3 as the database for Active Record
 group :production do
   gem 'pg'
@@ -13,7 +13,6 @@ end
 group :development, :test do
 gem 'sqlite3'
 end
-
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 gem 'twitter-bootstrap-rails'
