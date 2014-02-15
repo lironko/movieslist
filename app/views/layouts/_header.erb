@@ -11,11 +11,11 @@
             <ul class="nav">
               <li> <%= link_to "Home", root_path %> </li>
               <li> <%= link_to "Movies", movies_path  %> </li>
-              <li> <%= link_to "Users", users_path  %> </li>
               <li> <%= link_to "Kittens", kittens_path %> </li>
             </ul>
             <div class ="nav pull-right">
-               <%= link_to "Login", "#", :class => "btn btn-default"%> 
+             <%= link_to "Sign up", signup_path, :class => "btn btn-primary" %>
+             <%= link_to "Login", "#", :class => "btn btn-default"%> 
             </div>
           </div><!--/.nav-collapse -->
         </div> <!-- / container -->
