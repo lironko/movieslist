@@ -28,7 +28,7 @@
 //
 // Example:
 // @linkColor: #ff0000;
-
+@greyLighter: #eaeaea;
 
 /* mixins variables, etc. */
 .box_sizing {
@@ -177,4 +177,19 @@ footer ul li {
 
 footer a {
   color: #da70d6;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid @greyLighter;
+    &:last-child {
+      border-bottom: 1px solid @greyLighter;
+    }
+  }
 }
