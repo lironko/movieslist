@@ -36,7 +36,11 @@ module SessionsHelper
   end
 
   def store_location
-    session[:return_to] = request.url if request.get?
+    if request.get?
+      session[:return_to] = request.url 
+    else
+      session[:return_to] = request.referer
+    end
   end
 
   def admin_user
@@ -45,5 +49,12 @@ module SessionsHelper
 
   def admin_user?
     logged_in? && current_user.admin?
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      redirect_to login_url, alert: "You must be logged in to preform this action."
+    end
   end
 end

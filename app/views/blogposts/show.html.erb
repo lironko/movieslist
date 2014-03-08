@@ -1,5 +1,17 @@
 <% provide(:title, @blogpost.title) %>
 <%= render @blogpost %>
 <div>
-	<p> >------ Here there will be comments. <------ </p>
+	<h3>Comment section (<%= @blogpost.blogcomments.count %>)</h3>
+	<% unless logged_in? %>
+		<div class="alert"> 
+			Please log in if you'd like to comment.
+		</div>
+	<% end %>
+	<%= render 'shared/blogcomment_form' %>
+	<% if @blogpost.blogcomments.any? %>
+		<ol class="blogcomments">
+			<%= render @blogcomments %>
+		</ol>
+		<%= will_paginate @blogcomments %>
+	<% end %>
 </div>

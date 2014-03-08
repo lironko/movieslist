@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303162502) do
+ActiveRecord::Schema.define(version: 20140308161835) do
+
+  create_table "blog_comments", force: true do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "blogpost_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blog_comments", ["blogpost_id", "created_at"], name: "index_blog_comments_on_blogpost_id_and_created_at"
+
+  create_table "blogcomments", force: true do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "blogpost_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blogcomments", ["blogpost_id", "created_at"], name: "index_blogcomments_on_blogpost_id_and_created_at"
 
   create_table "blogposts", force: true do |t|
     t.string   "title"

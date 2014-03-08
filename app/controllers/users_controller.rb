@@ -54,13 +54,6 @@ class UsersController < ApplicationController
 
     # Before filters
 
-    def logged_in_user
-      unless logged_in?
-        store_location
-        redirect_to login_url, alert: "You must be logged in to preform this action."
-      end
-    end
-
     def not_logged_in
       if logged_in?
         flash[:notice] = "You must log out to preform this action."
@@ -72,6 +65,4 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       redirect_to(root_url) unless  current_user?(@user) || current_user.admin?;
     end
-
-
 end

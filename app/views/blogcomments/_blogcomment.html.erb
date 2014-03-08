@@ -1,0 +1,7 @@
+<li>
+	<%= link_to blogcomment.user.name, blogcomment.user %> says:
+	<span class="content well"><%= blogcomment.content %> </span>
+	<span class="timestamp">
+		Posted <%= time_ago_in_words(blogcomment.created_at) %> ago.
+	</span>
+</li>

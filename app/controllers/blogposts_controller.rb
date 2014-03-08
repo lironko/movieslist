@@ -8,6 +8,8 @@ class BlogpostsController < ApplicationController
 
   def show
   	@blogpost = Blogpost.find(params[:id])
+    @blogcomment = @blogpost.blogcomments.build 
+    @blogcomments = @blogpost.blogcomments.paginate(page: params[:page])
   end
 
   def new
