@@ -5,6 +5,9 @@
 	    - Admin
 	 <% end %>
 	 <% if current_user.admin? && !current_user?(user) %>
-	 | <%= link_to "delete", user, method: :delete, data: { confirm: "You sure bro?" } %>
+	 	<div class="pull-right">
+	    <%= link_to "Delete", user,:class => "btn btn-danger", method: :delete, data: { confirm: "You sure bro?" } %>
+	    <%= link_to "Edit", edit_user_path(user), :class => "btn btn-default" %>
+		</div>
 	 <% end %>
 </li>

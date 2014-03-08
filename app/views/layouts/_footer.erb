@@ -1,11 +1,12 @@
-      <footer class="footer">
-        <small>
-          AGNI KAI&copy; by L & A 2014
-        </small>
-        <ul>
-         <li> <%= link_to "About", about_path %> </li>
-         <li> <%= link_to "Help", help_path %> </li>
-         <li> <%= link_to "Contact", contact_path %> </li>
-         <li> <%= image_tag("kittens.png", alt: "Cats.") %> </li>
-        </ul>
-      </footer>
+<div class="footer">
+  <footer>
+    <small>
+      AGNI KAI&copy; by L & A 2014
+    </small>
+    <span class="pull-right"> <%= image_tag("kittens.png", alt: "Cats.") %></span>
+    <div class="btn-group">
+      <%= link_to "About", about_path, :class => "btn btn-default" %>
+      <%= link_to "Help", help_path, :class => "btn btn-default" %>
+      <%= link_to "Contact", contact_path, :class => "btn btn-default" %>
+    </div>
+</div>

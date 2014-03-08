@@ -1,0 +1,11 @@
+<% provide(:title, 'Blog') %>
+<h1>AGNI KAI Blog</h1>
+
+<%= will_paginate %>
+
+<div class="blogposts">
+	<%= link_to 'New post', new_blogpost_path, :class => "btn btn-inverse" if admin_user?%>
+	  <%= render @blogposts %>
+</div>
+
+<%= will_paginate %>

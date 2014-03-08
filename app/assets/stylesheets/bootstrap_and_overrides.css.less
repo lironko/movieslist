@@ -16,7 +16,7 @@
 @import "fontawesome/font-awesome";
 
 // Glyphicons
-//@import "twitter/bootstrap/sprites.less";
+@import "twitter/bootstrap/sprites.less";
 
 // Your custom LESS stylesheets goes here
 //
@@ -28,7 +28,11 @@
 //
 // Example:
 // @linkColor: #ff0000;
+@linkColor: #ff6699;
 @greyLighter: #eaeaea;
+@redPurple: #e40078;
+@redCrayola: #ee204d;
+@purple: #cc0000;
 
 /* mixins variables, etc. */
 .box_sizing {
@@ -36,6 +40,16 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 } 
+
+/* buttons */
+.btn-danger {
+  .buttonBackground(@redPurple, @redCrayola);
+}
+
+/* background */
+body {
+  background: url('pink-chevron-stripes.png')
+}
 
 
 /* miscellaneous */
@@ -106,9 +120,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  background-color: #FFE1FF;
-}
 
 @media (min-width: 979px) {
     body {
@@ -152,6 +163,7 @@ textarea {
 
 /* footer */
 
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -176,7 +188,11 @@ footer ul li {
 }
 
 footer a {
-  color: #da70d6;
+  color: @purple;
+}
+
+footer div{
+  .pull-right;
 }
 
 /* Users index */
@@ -192,4 +208,14 @@ footer a {
       border-bottom: 1px solid @greyLighter;
     }
   }
+}
+
+/* Blog */
+
+.blogpost {
+  border-bottom: 2px dashed;
+  word-wrap: break-word;
+  padding-bottom: 20px;
+  padding-top: 10px;
+
 }
