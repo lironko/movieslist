@@ -12,8 +12,7 @@ Movieslist::Application.routes.draw do
 
 
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users
-  resources :movies
+  resources :users  
   resources :blogposts
   resources :blogcomments, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
