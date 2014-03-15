@@ -30,6 +30,7 @@ GEM
     bcrypt-ruby (3.1.2)
     bootstrap-will_paginate (0.0.10)
       will_paginate
+    bootstrap_form (2.0.1)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -54,6 +55,9 @@ GEM
       i18n (~> 0.5)
     ffi (1.9.3)
     hike (1.2.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -75,8 +79,11 @@ GEM
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.4)
+    multi_xml (0.5.5)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    omdbapi (0.2.0)
+      httparty (= 0.11.0)
     pg (0.17.1)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -172,6 +179,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   bootstrap-will_paginate
+  bootstrap_form
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
   execjs
@@ -179,6 +187,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  omdbapi
   pg
   rails (= 4.0.2)
   rails_12factor

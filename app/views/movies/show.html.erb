@@ -1,0 +1,93 @@
+<% provide(:title, title_with_year_for(@movie)) %>
+<h1><%= title_with_year_for(@movie) %></h1>
+<div class="row">
+	<div class="span3">
+		<%= poster_for(@movie) %>
+		<table class="table">
+			<% unless @movie.plot == 'N/A' %>
+			<tr>
+				<td colspan="2"><%= @movie.plot %></td>
+			</tr>
+			<% end %>
+			<tr>
+				<th>IMDB:</th>
+				<td><%= @movie.imdb_rating %></td>
+			</tr>
+			<tr>
+				<th>Users:</th>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<th>Kittens:</th>
+				<td>N/A</td>
+			</tr>
+			<% if admin_user? %>
+				<tr>
+					<td><%= link_to "Delete", @movie,:class => "btn btn-danger", method: :delete, data: { confirm: "You sure bro?" } %></td>
+					<td><%= link_to "Edit", edit_movie_path(@movie), :class => "btn" %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+	<div class="span8">
+		<table class="table table-striped table-bordered">
+			<tr>
+				<th>Title:</th>
+				<td><%= @movie.title %> </td>
+			</tr>
+			<tr>
+				<th>Year:</th>
+				<td><%= @movie.year %> </td>
+			</tr>
+			<tr>
+				<th>Rated:</th>
+				<td><%= @movie.rated %> </td>
+			</tr>
+			<tr>
+				<th>Released:</th>
+				<td><%= @movie.released %> </td>
+			</tr>
+			<tr>
+				<th>Runtime:</th>
+				<td><%= @movie.runtime %> </td>
+			</tr>
+			<tr>
+				<th>Genre:</th>
+				<td><%= @movie.genre %> </td>
+			</tr>
+			<tr>
+				<th>Director:</th> 
+				<td><%= @movie.director %></td>
+			</tr>
+			<tr>
+				<th>Writer:</th>
+				<td><%= @movie.writer %> </td>
+			</tr>
+			<tr>
+				<th>Actors:</th>
+				<td><%= @movie.actors %> </td>
+			</tr>
+			<tr>
+				<th>Language:</th>
+				<td><%= @movie.language %> </td>
+			</tr>
+			<tr>
+				<th>Country:</th>
+				<td><%= @movie.country %> </td>
+			</tr>
+			<tr>
+				<th>Awards:</th>
+				<td><%= @movie.awards %> </td>
+			</tr>
+			<tr>
+				<th>External links:</th>
+				<td><%= imdb_link_for(@movie) %></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="reviews">
+	<p> Reviews go here? Sort by date created? by user id? by..?
+		there are no reviews atm
+	</p>
+</div>

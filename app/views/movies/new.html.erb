@@ -1,0 +1,24 @@
+<% provide(:title, 'New movie') %>
+<h1>New Movie</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+  	<%= form_for(@movie) do |f| %>
+      <%= render 'movie_errors' %>
+
+      <%= f.label "Select method" %>
+      <%= f.select :type, ["Title only", "IMDB ID", "Title and year"] %>
+
+      <%= f.label :title %>
+  	  <%= f.text_field :title, placeholder: "Enter movie title" %>
+
+  	  <%= f.label :year %>
+  	  <%= f.text_field :year, placeholder: "Enter a year" %>
+
+  	  <%= f.label :imdb_id %>
+      <%= f.text_field :imdb_id, placeholder: "Enter IMDB ID" %>
+
+   	  <%= f.submit "Add my movie" , class: "btn btn-large btn-primary" %>
+  	<% end %>
+  </div>
+</div>

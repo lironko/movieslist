@@ -1,5 +1,4 @@
 class BlogpostsController < ApplicationController
-  include SessionsHelper
   before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
 
   def index

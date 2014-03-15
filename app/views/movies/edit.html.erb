@@ -1,0 +1,65 @@
+<% provide(:title, "Edit "+title_with_year_for(@movie)) %>
+<h1><%= title_with_year_for(@movie) %> </h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@movie) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :year %>
+      <%= f.text_field :year %>
+
+      <%= f.label :rated %>
+      <%= f.text_field :rated %>
+
+      <%= f.label :released %>
+      <%= f.text_field :released %>
+
+      <%= f.label :runtime %>
+      <%= f.text_field :runtime %>
+
+      <%= f.label :genre %>
+      <%= f.text_field :genre %>
+
+      <%= f.label :director %>
+      <%= f.text_field :director %>					
+
+      <%= f.label :writer %>
+      <%= f.text_field :writer %>
+
+      <%= f.label :actors %>
+      <%= f.text_area :actors %>
+
+      <%= f.label :plot %>
+      <%= f.text_area :plot %>
+
+      <%= f.label :language %>
+      <%= f.text_field :language %>
+
+      <%= f.label :country %>
+      <%= f.text_field :country %>
+
+      <%= f.label :awards %>
+      <%= f.text_field :awards %>
+
+      <%= f.label :poster %>
+      <%= f.text_area :poster %>
+
+      <%= f.label :imdb_rating %>
+      <%= f.text_field :imdb_rating %>
+
+      <%= f.label :imdb_id %>
+      <%= f.text_field :imdb_id %>
+
+      <%= f.label :type %>
+      <%= f.text_field :type %>
+
+
+      <%= f.submit "Save changes", class: "btn btn-large btn primary" %>
+
+    <% end %>
+  </div>
+</div>

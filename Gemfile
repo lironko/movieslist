@@ -29,6 +29,8 @@ gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
+gem 'bootstrap_form'
+gem 'omdbapi'
 
 
 # Use SCSS for stylesheets
