@@ -9,9 +9,9 @@
 	<% end %>
 	<%= render 'shared/blogcomment_form' %>
 	<% if @blogpost.blogcomments.any? %>
-		<ol class="blogcomments">
+		<ul class="media-list">
 			<%= render @blogcomments %>
-		</ol>
+		</ul>
 		<%= will_paginate @blogcomments %>
 	<% end %>
 </div>

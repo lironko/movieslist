@@ -57,4 +57,9 @@ module SessionsHelper
       redirect_to login_url, alert: "You must be logged in to preform this action."
     end
   end
+
+  def current_or_admin?(user)
+    current_user?(user) || admin_user?
+  end
+
 end

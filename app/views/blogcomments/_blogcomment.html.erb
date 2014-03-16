@@ -1,7 +1,15 @@
-<li>
-	<%= link_to blogcomment.user.name, blogcomment.user %> says:
-	<span class="content well"><%= blogcomment.content %> </span>
-	<span class="timestamp">
-		Posted <%= time_ago_in_words(blogcomment.created_at) %> ago.
-	</span>
+<li class="media">
+	<%= gravatar_for(blogcomment.user, size: 64, :class => "media-object pull-left") %>
+	<% if current_or_admin?(blogcomment.user) %>
+		<%= link_to 'Delete', blogcomment, class: "btn btn-danger pull-right", method: :delete, data: {confirm: "You sure bro?"} %>
+	<% end %>
+	<div class="media-body>">
+		<h4><%= link_to blogcomment.user.name, blogcomment.user %> says: 		
+		<span class="timestamp">
+		(<%= time_ago_in_words(blogcomment.created_at) %> ago.)
+		</span></h4>
+
+		<%= blogcomment.content %>
+	</div>
+
 </li>
